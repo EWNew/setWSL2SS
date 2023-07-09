@@ -5,7 +5,9 @@
 
 # 配置代理
 export hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
+
 alias setss='export https_proxy="http://${hostip}:7890";export http_proxy="http://${hostip}:7890";'
+
 alias unsetss='unset http_proxy;unset https_proxy'
 
 
